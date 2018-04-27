@@ -1,5 +1,5 @@
 <template>
-  <div class="courseItem">
+  <div class="courseItem" @click="courseDetail">
     <div class="img">
       <img src="https://img1.mukewang.com/5ab8d27d00010ac006000338-240-135.jpg" alt="">
     </div>
@@ -17,7 +17,11 @@
 </template>
 <script>
 export default {
-  
+  methods: {
+    courseDetail() {
+      
+    }
+  }
 }
 </script>
 <style lang="stylus">
