@@ -62,9 +62,9 @@
         <el-tab-pane class="el-tab-pane" label="问答评论" name="second">
           <div class="content-wrap">
             <div class="content">
-              <div class="comp-filter-ba">
+              <div class="comp-filter-bar">
                 <el-row>
-                  <el-button round>全部</el-button></el-button>
+                  <el-button round>全部</el-button>
                   <el-button round>评论</el-button>
                   <el-button round>问答</el-button>
                   <el-button round>未解决</el-button>
@@ -77,8 +77,36 @@
             </div>
           </div>
         </el-tab-pane>
-        <el-tab-pane class="el-tab-pane" label="同学笔记" name="third">同学笔记</el-tab-pane>
-        <el-tab-pane class="el-tab-pane" label="用户评价" name="fourth">用户评价</el-tab-pane>
+        <el-tab-pane class="el-tab-pane" label="同学笔记" name="third">
+          <div class="content-wrap">
+            <div class="content">
+              <div class="comp-filter-bar">
+                <el-row>
+                  <el-button round>最新</el-button>
+                  <el-button round>点赞</el-button>
+                </el-row>
+              </div>
+              <div class="answertabcon">
+                <answer-item></answer-item>
+              </div>
+            </div>
+          </div>
+        </el-tab-pane>
+        <el-tab-pane class="el-tab-pane" label="用户评价" name="fourth">
+          <div class="content-wrap">
+            <div class="content">
+              <div class="evaluation-info">
+                <div class="evaluation-title">
+                  综合<br>评分
+                </div>
+                <div class="evaluation-score">9.5</div>
+              </div>
+              <div class="answertabcon">
+                <answer-item></answer-item>
+              </div>
+            </div>
+          </div>
+        </el-tab-pane>
       </el-tabs>
     </div>
   </div>
@@ -169,7 +197,7 @@ export default {
             font-weight 700
     .course-info-menu 
       width 100%
-      line-height 68px
+      // line-height 68px
       background-color #fff
       box-shadow 0 4px 8px 0 rgba(28,31,33,.1)
       .el-tabs__item
