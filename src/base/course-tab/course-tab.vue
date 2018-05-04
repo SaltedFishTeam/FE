@@ -2,7 +2,7 @@
   <div class="courseTab">
     <span class="title">{{data.title}}</span>
     <ul>
-      <li class="tab-item" v-for="(item, index) in data.content" :key="index">{{item}}</li>
+      <li class="tab-item" v-for="(item, index) in data.content" :key="index" @click="selectItem">{{item}}</li>
     </ul>
   </div>
 </template>
@@ -12,6 +12,11 @@ export default {
     data: {
       type: Object,
       default: {}
+    }
+  },
+  methods: {
+    selectItem() {
+      this.$emit('select')
     }
   }
 }

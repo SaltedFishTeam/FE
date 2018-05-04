@@ -2,7 +2,7 @@
   <div class="course">
     <div class="nav-box">
       <div class="courseTab-wrapper">
-        <course-tab :data="direction"></course-tab>
+        <course-tab :data="direction" @select="selectCourse"></course-tab>
       </div>
       <div class="courseTab-wrapper">
         <course-tab :data="classify"></course-tab>
@@ -31,6 +31,13 @@ export default {
         title: '类型 :',
         content: ['全部','视频','直播','习题','图片']
       }
+    }
+  },
+  methods: {
+    selectCourse() {
+      this.$router.push({
+        path: '/courses/content'
+      })
     }
   },
   components: {
