@@ -1,30 +1,22 @@
 <template>
-  <div class="hello">
-    <img src="./assets/logo.png">
-    <hello/>
+  <div id="app">
+    <tab></tab>
+    <router-view/>
   </div>
 </template>
 
 <script>
-// export default {
-//   name: 'App'
-// }
-import Hello from './components/Hello'
+import Tab from '@/components/tab/tab'
+import Courses from '@/components/courses/courses'
 export default {
-  name:'app',
+  name: 'App',
   components: {
-    Hello
+    Courses,
+    Tab
   }
 }
 </script>
 
 <style>
-/* #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-} */
+
 </style>
